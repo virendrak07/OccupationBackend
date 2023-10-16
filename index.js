@@ -48,6 +48,4 @@ mongoose.connection.on('error', (err) => {
 app.get('/', requireToken, (req, res) => {
     res.send({ email: req.user.email, doctorId: req.user.doctorId })
 })
-app.listen(port, "0.0.0.0", function () {
-    console.log(`Server is running on http://${HOST}:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
