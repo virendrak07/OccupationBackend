@@ -2,8 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express();
-const PORT = 3000;
-const HOST = '0.0.0.0'; 
+const port = process.env.PORT || 3000;
 const { mogoUrl } = require('./keys')
 
 
@@ -49,6 +48,6 @@ mongoose.connection.on('error', (err) => {
 app.get('/', requireToken, (req, res) => {
     res.send({ email: req.user.email, doctorId: req.user.doctorId })
 })
-app.listen(PORT, HOST, () => {
+app.listen(port, "0.0.0.0", function () {
     console.log(`Server is running on http://${HOST}:${PORT}`);
 });
