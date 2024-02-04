@@ -18,9 +18,7 @@ app.options('*', cors()); // Enable preflight requests for all routes
 
 app.use(bodyParser.json());
 require('./models/userData');
-app.get('/', (req, res) => {
-    res.send("Hello World");
-})
+
 const requireToken = require('./middleware/requireToken');
 const authRoutes = require('./routes/authRoutes');
 const patientRoutes = require('./routes/patientData');
