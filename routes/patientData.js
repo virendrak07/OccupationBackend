@@ -31,7 +31,7 @@ router.post('/patientData', async (req, res) => {
             service: 'Gmail', // e.g., Gmail, Outlook, etc.
             auth: {
                 user: 'otherapy1969@gmail.com',
-                pass: 'rvhikhtnvakyqyqw'
+                pass: 'hzdd omdx wgrm ovew'
             }
         });
 

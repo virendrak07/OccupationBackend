@@ -20,6 +20,14 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    contactNumber: {
+        type: String,
+        required: true
     }
 })
 

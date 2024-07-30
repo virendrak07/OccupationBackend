@@ -30,6 +30,8 @@ const nachfahrenDataRoutes = require('./routes/nachfahrenData');
 const turmeDataRoutes = require('./routes/turmeData');
 const klotzeDataRoutes = require('./routes/klotzeData');
 const umdrehenDataRoutes = require('./routes/umdrehenData');
+const kreuzenDataRoutes = require('./routes/kreuzenData');
+
 
 app.use(authRoutes);
 app.use(patientRoutes);
@@ -41,6 +43,7 @@ app.use(turmeDataRoutes);
 app.use(nachfahrenDataRoutes);
 app.use(klotzeDataRoutes);
 app.use(umdrehenDataRoutes);
+app.use(kreuzenDataRoutes);
 
 mongoose.connect(mogoUrl, {
   useNewUrlParser: true,
@@ -56,7 +59,7 @@ mongoose.connection.on('error', (err) => {
 });
 
 app.get('/', requireToken, (req, res) => {
-  res.send({ email: req.user.email, doctorId: req.user.doctorId });
+  res.send({ name: req.user.name, email: req.user.email, doctorId: req.user.doctorId });
 });
 
 app.listen(PORT, () => {

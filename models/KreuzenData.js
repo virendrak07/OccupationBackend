@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const nachfahrenDataSchema = new mongoose.Schema({
+const kreuzenDataSchema = new mongoose.Schema({
     patientId: {
         type: String,
         required: true,
@@ -17,6 +17,6 @@ const nachfahrenDataSchema = new mongoose.Schema({
     // Add other fields as needed
 });
 
-const NachfahrenData = mongoose.model('nachfahrenData', nachfahrenDataSchema);
+const KreuzenData = mongoose.model('kreuzenData', kreuzenDataSchema);
 
-module.exports = NachfahrenData;
+module.exports = KreuzenData;
