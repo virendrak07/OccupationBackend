@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 3001; // 3000 is a fallback for local development
+const PORT = process.env.PORT; // 3000 is a fallback for local development
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
